@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class RubyController : MonoBehaviour
 {
+    Rigidbody2D rigidbody2D;
+    float horizontal;
+    float vertical;
     void Start()
     {
     }
@@ -12,8 +15,8 @@ public class RubyController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = transform.position;
-        position.x = position.x + 1.6f * horizontal * Time.deltaTime;
-        position.y = position.y + 1.6f * vertical * Time.deltaTime;
+        position.x = position.x + 2.5f * horizontal * Time.deltaTime;
+        position.y = position.y + 2.5f * vertical * Time.deltaTime;
         transform.position = position;
     }
 }
